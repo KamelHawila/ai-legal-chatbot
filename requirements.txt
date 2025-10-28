@@ -1,0 +1,26 @@
+# Core App
+streamlit==1.38.0
+python-dotenv==1.0.1
+
+# Language & Translation
+langdetect==1.0.9
+deep-translator==1.11.4
+
+# NLP & Embeddings
+sentence-transformers==3.0.1
+transformers==4.44.0
+torch>=2.2.0
+numpy==1.26.4
+
+# Vector Database
+chromadb==0.5.5
+
+# OpenAI API
+openai==1.42.0
+
+# Utilities
+tqdm==4.66.4
+pandas==2.2.2
+
+# Optional (for Jupyter notebooks)
+ipykernel==6.29.5

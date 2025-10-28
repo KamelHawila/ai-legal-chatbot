@@ -1,0 +1,19 @@
+# Environment & API keys
+.env
+
+# Logs and local data
+logs/
+*.jsonl
+
+# Embeddings / vector DB
+data/chroma_db*/
+data/embeddings*/
+data/chroma_db_upgrade*/
+data/chroma_db_articles*/
+
+# OS & IDE files
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.vscode/
+.DS_Store
