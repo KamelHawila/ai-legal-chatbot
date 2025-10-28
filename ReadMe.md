@@ -16,34 +16,31 @@ A multilingual AI chatbot that answers legal questions based on the **Lebanese P
 
 ## 🧩 Project Structure
 
-chatbot/
-│
-├── app/                              # Streamlit application
-│   ├── streamlit_app.py              # Main chatbot interface
-│   └── streamlit_app_old.py          # Before updating the interface
-│
-├── data/                             # Data and vector storage
-│   ├── processed/                    # Cleaned & split Lebanese Penal Code articles
-│   ├── embeddings/                   # Generated embedding arrays (ignored in Git)
-│   └── chroma_db_articles/           # Chroma vector database (ignored)
-│
-├── logs/                             # Chat & feedback logs (ignored)
-│   ├── chat_logs.jsonl               # User questions, answers, and retrieved articles
-│   └── feedback.jsonl                # User feedback (helpful / not helpful)
-│
-├── LBN_PenalCode1943_AR.pdf          # Source Lebanese Penal Code (Arabic, 1943)
-│
-├── .env                              # OpenAI API key (ignored)
-├── .gitignore                        # Git ignore rules
-├── requirements.txt                  # Dependencies for running the app
-├── README.md                         # Project documentation
-│
-├── scraping.ipynb                    # Extracts and cleans text from the legal PDF
-├── Embeddings.ipynb                  # Generates embeddings for articles
-├── upgrade_embeddings.ipynb          # Upgrades to multilingual embedding model
-├── Meta_data.ipynb                   # Creates metadata for each article
-├── chunks_upgrade.ipynb              # Splits text by article and cleans formatting
-└── upgrade_embeddings.ipynb          # Embedding refinement notebook
+- **app/** – Streamlit application  
+  - `streamlit_app.py` → Main chatbot interface  
+  - `streamlit_app_old.py` → Older version (before redesign)
+
+- **data/** – Data and vector storage  
+  - `processed/` → Cleaned & split Lebanese Penal Code articles  
+  - `embeddings/` → Generated embedding arrays *(ignored in Git)*  
+  - `chroma_db_articles/` → Chroma vector database *(ignored)*
+
+- **logs/** – Chat & feedback logs *(ignored)*  
+  - `chat_logs.jsonl` → Logs of questions, answers, and retrieved articles  
+  - `feedback.jsonl` → User feedback (helpful / not helpful)
+
+- `LBN_PenalCode1943_AR.pdf` → Original Lebanese Penal Code (Arabic, 1943)  
+- `.env` → Contains the OpenAI API key *(ignored)*  
+- `.gitignore` → Files and folders to exclude from Git  
+- `requirements.txt` → Python dependencies for the app  
+- `README.md` → Full project documentation  
+
+- **Notebooks (Data Preparation & Embedding)**
+  - `scraping.ipynb` → Extracts and cleans text from the legal PDF  
+  - `Embeddings.ipynb` → Generates embeddings for articles  
+  - `upgrade_embeddings.ipynb` → Upgrades to multilingual embedding model  
+  - `Meta_data.ipynb` → Creates metadata for each article  
+  - `chunks_upgrade.ipynb` → Splits text by article and cleans formatting
 
 ---
 
@@ -148,4 +145,5 @@ You’re free to use, modify, and distribute it with attribution.
 
 You can try the chatbot online here:  
 👉 [https://ai-legal-chatbot.streamlit.app](https://ai-legal-chatbot.streamlit.app)
+
 
