@@ -139,4 +139,22 @@ You’re free to use, modify, and distribute it with attribution.
 🌐 [GitHub](https://github.com/KamelHawila) • [LinkedIn](https://www.linkedin.com/in/kamel-hawila-70052b355/)
 
 
+---
+
+## 🎥 Demo & Screenshots
+
+### 🟦 Arabic Legal Query
+The chatbot answers complex legal questions in Arabic, retrieving and summarizing relevant articles from the Lebanese Penal Code.
+
+![Arabic Query Example](docs/chatbot_arabic_query.png)
+
+---
+
+### 🟩 English Query + Arabic Translation
+The chatbot supports multilingual interaction. Users can ask in English or French and receive accurate legal explanations — with the ability to translate answers into Arabic.
+
+![English Query Example](docs/chatbot_english_translation.png)
+
+
+
 
