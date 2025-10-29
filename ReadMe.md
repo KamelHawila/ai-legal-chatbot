@@ -139,11 +139,4 @@ You’re free to use, modify, and distribute it with attribution.
 🌐 [GitHub](https://github.com/KamelHawila) • [LinkedIn](https://www.linkedin.com/in/kamel-hawila-70052b355/)
 
 
----
-
-## 🌐 Live Demo
-
-You can try the chatbot online here:  
-👉 [https://ai-legal-chatbot.streamlit.app](https://ai-legal-chatbot.streamlit.app)
-
 
