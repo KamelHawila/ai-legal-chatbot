@@ -1,5 +1,7 @@
 # ⚖️ AI Legal Chatbot – Lebanese Penal Code
 
+> 🇱🇧 An AI-powered legal assistant for Lebanese Law – built with NLP, embeddings, and GPT models.
+
 A multilingual AI chatbot that answers legal questions based on the **Lebanese Penal Code (قانون العقوبات اللبناني)** using NLP, semantic embeddings, and OpenAI models.
 
 ---
@@ -9,8 +11,8 @@ A multilingual AI chatbot that answers legal questions based on the **Lebanese P
 - 💬 **Chat interface** built with `Streamlit`
 - 🔍 Retrieves relevant **law articles** from the Penal Code
 - 🌍 **Multilingual support** – Arabic, English, and French
-- 🗳️ Feedback system with persistent logging
-- 🧾 Chat & feedback logs stored in JSONL format for further analysis
+- 🗳️ **Feedback system** with persistent logging
+- 🧾 **Chat & feedback logs** stored in JSONL format for further analysis
 
 ---
 
@@ -44,118 +46,92 @@ A multilingual AI chatbot that answers legal questions based on the **Lebanese P
 
 ---
 
-## 🛠️ Setup & Installation
+## ⚙️ Setup & Installation
 
-### 1. Clone the repository
+### 1️⃣ Clone the repository
 ```bash
 git clone https://github.com/KamelHawila/ai-legal-chatbot.git
 cd ai-legal-chatbot
-
-
-2. Create a virtual environment
+2️⃣ Create a virtual environment
+bash
+Copy code
 python -m venv venv
 venv\Scripts\activate   # On Windows
 source venv/bin/activate   # On Mac/Linux
-
-3. Install dependencies
+3️⃣ Install dependencies
+bash
+Copy code
 pip install -r requirements.txt
-
-4. Set up environment variables
-
+4️⃣ Set up environment variables
 Create a .env file in the project root:
 
+bash
+Copy code
 OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-5. Run the chatbot
+5️⃣ Run the chatbot
+bash
+Copy code
 streamlit run app/streamlit_app.py
+💡 Once launched, open the link shown in your terminal (usually http://localhost:8501) to interact with the chatbot.
 
-
----
-
-### 2️⃣ **💡 Usage Example**
-
-Show how a user interacts with your chatbot:
-
-```markdown
----
-
-## 💡 Usage Example
-
+💬 Usage Examples
 Once launched, you can ask legal questions such as:
 
-**Arabic:**  
-> ما هي العقوبة على السرقة؟
+Arabic:
 
-**English:**  
-> What is the punishment for theft?
+ما هي العقوبة على السرقة؟
 
-**French:**  
-> Quelle est la peine pour un vol commis la nuit dans une maison habitée ?
+English:
 
-The chatbot retrieves relevant articles from the **Lebanese Penal Code**, then summarizes them with references like:
-> تعاقب السرقة بالأشغال الشاقة من ثلاث سنوات إلى سبع سنوات في حالات معينة، مثل الكسر أو استعمال العنف... [المادة 639]
+What is the punishment for theft?
 
+French:
 
----
+Quelle est la peine pour un vol commis la nuit dans une maison habitée ?
 
-## 📊 Logging & Feedback System
+The chatbot retrieves relevant articles from the Lebanese Penal Code, then summarizes them with references like:
 
+تعاقب السرقة بالأشغال الشاقة من ثلاث سنوات إلى سبع سنوات في حالات معينة، مثل الكسر أو استعمال العنف... [المادة 639]
+
+📊 Logging & Feedback System
 All interactions are stored for analysis and improvement:
 
-| File | Description |
-|------|--------------|
-| `logs/chat_logs.jsonl` | Stores each Q&A interaction, including retrieved article IDs |
-| `logs/feedback.jsonl` | Stores user feedback (helpful / unhelpful) |
-| `data/chroma_db_articles/` | Vector database for semantic search (ignored in Git) |
+File	Description
+logs/chat_logs.jsonl	Stores each Q&A interaction, including retrieved article IDs
+logs/feedback.jsonl	Stores user feedback (helpful / unhelpful)
+data/chroma_db_articles/	Vector database for semantic search (ignored in Git)
 
 These logs help analyze accuracy, track common legal queries, and improve future model versions.
 
----
+🧠 Tech Stack
+Language: Python
 
-## 🧠 Tech Stack
+Frontend: Streamlit
 
-- **Language:** Python  
-- **Frontend:** Streamlit  
-- **AI Models:** OpenAI GPT-4o / GPT-4o-mini  
-- **Embeddings:** SentenceTransformer (intfloat/multilingual-e5-large)  
-- **Database:** ChromaDB  
-- **NLP Tools:** Langdetect, Deep-Translator  
-- **Utilities:** NumPy, dotenv
+AI Models: OpenAI GPT-4o / GPT-4o-mini
 
+Embeddings: SentenceTransformer (intfloat/multilingual-e5-large)
 
----
+Database: ChromaDB
 
----
+NLP Tools: Langdetect, Deep-Translator
 
-## 📸 Demo & Screenshots
+Utilities: NumPy, dotenv
 
-### 🔷 Arabic Legal Query  
-The chatbot answers complex legal questions in **Arabic**, retrieving and summarizing relevant articles directly from the **Lebanese Penal Code**.
+📸 Demo & Screenshots
+🔷 Arabic Legal Query
+The chatbot answers complex legal questions in Arabic, retrieving and summarizing relevant articles directly from the Lebanese Penal Code.
 
 <img src="./docs/chatbot_arabic_query.png" width="750" alt="Arabic Query Example">
-
----
-
-### 🟩 English Query + Arabic Translation  
-The chatbot supports **multilingual interaction**. Users can ask in English or French and receive accurate **legal answers in the detected language**.
+🟩 English Query + Arabic Translation
+The chatbot supports multilingual interaction. Users can ask in English or French and receive accurate legal answers in the detected language.
 
 <img src="./docs/chatbot_english_translation.png" width="750" alt="English Query Example">
+👨‍💻 Author
+Kamel Hawila
+🎓 Computer Science Graduate | Data Science & AI Enthusiast
+🌐 GitHub: https://github.com/KamelHawila • LinkedIn: www.linkedin.com/in/kamel-hawila
 
----
-
-## 🧑‍💻 Author
-
-**Kamel Hawila**  
-🎓 Computer Science Graduate | Data Science & AI Enthusiast  
-🌐 [GitHub](https://github.com/KamelHawila) • [LinkedIn](https://www.linkedin.com/in/kamel-hawila-70052b355/)
-
----
-
-## 📜 License
-
-This project is released under the **MIT License**.  
+📜 License
+This project is released under the MIT License.
 You’re free to use, modify, and distribute it with attribution.
-
-
-
-
