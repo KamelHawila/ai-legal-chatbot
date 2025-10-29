@@ -3,7 +3,6 @@
 import os, json, datetime, traceback
 import numpy as np
 import streamlit as st
-from dotenv import load_dotenv
 from openai import OpenAI
 import chromadb
 from chromadb.utils import embedding_functions
@@ -13,15 +12,27 @@ from deep_translator import GoogleTranslator
 # ==============================
 # 0) BOOTSTRAP
 # ==============================
-load_dotenv()
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+except Exception:
+    OPENAI_API_KEY = st.secrets.get("OPENAI_API_KEY", "")
+
+# If key found, set it for OpenAI client
+if OPENAI_API_KEY:
+    os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
+else:
+    st.error("❌ لم يتم العثور على مفتاح OpenAI. تأكد من إضافته في Secrets أو ملف .env.")
+
 OPENAI_MODEL_DEFAULT = "gpt-4o-mini"  # change to "gpt-4o" if you have access
 
-# Connect OpenAI (show a clear error if key missing)
+# Connect OpenAI
 def get_openai_client():
     try:
         return OpenAI()
     except Exception as e:
-        st.error("❌ لم يتم العثور على مفتاح OpenAI. رجاءً تأكد من ضبط المتغير OPENAI_API_KEY.")
+        st.error("❌ لم يتم العثور على مفتاح OpenAI. الرجاء التأكد من ضبط المتغير OPENAI_API_KEY.")
         raise e
 
 client = get_openai_client()
