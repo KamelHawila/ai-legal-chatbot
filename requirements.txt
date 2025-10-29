@@ -1,6 +1,6 @@
 # Core App
 streamlit==1.38.0
-python-dotenv==1.0.1 --no-cache-dir
+python-dotenv==1.0.1
 
 # Language & Translation
 langdetect==1.0.9
