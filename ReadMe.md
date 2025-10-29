@@ -125,36 +125,36 @@ These logs help analyze accuracy, track common legal queries, and improve future
 
 ---
 
-## 📜 License
+---
 
-This project is released under the **MIT License**.  
-You’re free to use, modify, and distribute it with attribution.
+## 📸 Demo & Screenshots
+
+### 🔷 Arabic Legal Query  
+The chatbot answers complex legal questions in **Arabic**, retrieving and summarizing relevant articles directly from the **Lebanese Penal Code**.
+
+<img src="./docs/chatbot_arabic_query.png" width="750" alt="Arabic Query Example">
 
 ---
 
-## 👨‍💻 Author
+### 🟩 English Query + Arabic Translation  
+The chatbot supports **multilingual interaction**. Users can ask in English or French and receive accurate **legal answers in the detected language**.
+
+<img src="./docs/chatbot_english_translation.png" width="750" alt="English Query Example">
+
+---
+
+## 🧑‍💻 Author
 
 **Kamel Hawila**  
 🎓 Computer Science Graduate | Data Science & AI Enthusiast  
 🌐 [GitHub](https://github.com/KamelHawila) • [LinkedIn](https://www.linkedin.com/in/kamel-hawila-70052b355/)
 
-
 ---
 
-## 🎥 Demo & Screenshots
+## 📜 License
 
-### 🟦 Arabic Legal Query
-The chatbot answers complex legal questions in Arabic, retrieving and summarizing relevant articles from the Lebanese Penal Code.
-
-![Arabic Query Example](./docs/chatbot_arabic_query.png)
-
----
-
-### 🟩 English Query + Arabic Translation
-The chatbot supports multilingual interaction. Users can ask in English or French and receive accurate legal explanations — with the ability to translate answers into Arabic.
-
-![English Query Example](./docs/chatbot_english_translation.png)
-
+This project is released under the **MIT License**.  
+You’re free to use, modify, and distribute it with attribution.
 
 
 
