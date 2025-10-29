@@ -30,13 +30,13 @@ client = get_openai_client()
 EMBED_MODEL_NAME = "intfloat/multilingual-e5-large"
 embed_func = embedding_functions.SentenceTransformerEmbeddingFunction(model_name=EMBED_MODEL_NAME)
 
-CHROMA_PATH = r"C:\Users\PC\OneDrive\Desktop\chatbot\data\chroma_db_articles"
+CHROMA_PATH = "data\chroma_db_articles"
 COLLECTION_NAME = "penal_code_articles"
 chroma_client = chromadb.PersistentClient(path=CHROMA_PATH)
 collection = chroma_client.get_collection(name=COLLECTION_NAME, embedding_function=embed_func)
 
 # for sidebar stats
-ARTICLES_PATH = r"C:\Users\PC\OneDrive\Desktop\chatbot\data\processed\penal_code_articles.json"
+ARTICLES_PATH = "data\processed\penal_code_articles.json"
 try:
     with open(ARTICLES_PATH, "r", encoding="utf-8") as f:
         _articles_preview = json.load(f)
