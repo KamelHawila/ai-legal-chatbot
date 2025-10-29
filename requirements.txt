@@ -1,9 +1,6 @@
---extra-index-url https://pypi.org/simple
-pip==25.0
-python-dotenv==1.0.1
-
 # Core App
 streamlit==1.38.0
+python-dotenv==1.0.1
 
 # Language & Translation
 langdetect==1.0.9
